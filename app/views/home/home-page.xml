@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Home">
+        <ActionItem text="Logout" tap="{{ onLogoutTap }}" ios.position="right" />
+    </ActionBar>
+    
+    <StackLayout class="p-6">
+        <Label text="Welcome!" class="text-2xl font-bold text-center mb-6" />
+        <Label text="You're successfully logged in" class="text-center mb-6" />
+        
+        <Button text="Make a Booking" 
+                tap="{{ onBookingTap }}" 
+                class="bg-green-500 text-white font-bold py-3 rounded" />
+    </StackLayout>
+</Page>

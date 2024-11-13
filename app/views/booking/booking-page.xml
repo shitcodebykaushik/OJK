@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-gray-100">
+    <ActionBar title="Booking" class="bg-blue-500 text-white">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" />
+    </ActionBar>
+    
+    <StackLayout class="p-6">
+        <Label text="Make a Booking" class="text-2xl font-bold text-center mb-6" />
+        
+        <TextField hint="Select Date" 
+                  text="{{ date }}" 
+                  class="mb-4 p-4 bg-white border rounded" />
+                  
+        <TextField hint="Select Time" 
+                  text="{{ time }}" 
+                  class="mb-4 p-4 bg-white border rounded" />
+                  
+        <TextField hint="Number of People" 
+                  text="{{ people }}" 
+                  keyboardType="number" 
+                  class="mb-4 p-4 bg-white border rounded" />
+        
+        <Button text="Confirm Booking" 
+                tap="{{ onConfirmBooking }}" 
+                class="bg-green-500 text-white font-bold py-3 rounded" />
+    </StackLayout>
+</Page>
