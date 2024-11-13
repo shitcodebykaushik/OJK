@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-gray-100">
-    <ActionBar title="Music Player" class="bg-blue-500 text-white">
+    <ActionBar title="Music Player" class="bg-red-300 text-white">
         <NavigationButton text="Back" android.systemIcon="ic_menu_back" />
     </ActionBar>
 

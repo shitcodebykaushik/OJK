@@ -1,30 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-gray-100">
-    <ActionBar title="Sign Up" class="bg-blue-500 text-white">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-red-300">
+    <ActionBar title="Sign Up" class="bg-red-400 text-white">
         <NavigationButton text="Back" android.systemIcon="ic_menu_back" />
     </ActionBar>
     
-    <StackLayout class="p-6">
-        <Label text="Create Account" class="text-2xl font-bold text-center mb-6" />
-        
-        <TextField hint="Full Name" 
-                  text="{{ fullName }}" 
-                  class="mb-4 p-4 bg-white border rounded" />
-                  
-        <TextField hint="Email" 
-                  text="{{ email }}" 
-                  keyboardType="email" 
-                  autocorrect="false" 
-                  autocapitalizationType="none"
-                  class="mb-4 p-4 bg-white border rounded" />
-                  
-        <TextField hint="Password" 
-                  text="{{ password }}" 
-                  secure="true" 
-                  class="mb-4 p-4 bg-white border rounded" />
-        
-        <Button text="Sign Up" 
-                tap="{{ onSignUpTap }}" 
-                class="bg-blue-500 text-white font-bold py-3 rounded" />
-    </StackLayout>
+    <ScrollView>
+        <StackLayout class="p-6" horizontalAlignment="center">
+
+            <!-- Title -->
+            <Label text="Create Your Account" class="text-2xl font-bold text-center mb-6 text-gray-800" />
+
+            <!-- Full Name Field -->
+            <TextField hint="Full Name" 
+                       text="{{ fullName }}" 
+                       color="black"
+                       class="mb-4 p-4 bg-white border border-red-200 rounded-full shadow-sm w-4/5" />
+
+            <!-- Email Field -->
+            <TextField hint="Email" 
+                       text="{{ email }}" 
+                       keyboardType="email" 
+                       autocorrect="false" 
+                       autocapitalizationType="none"
+                       color="black"
+                       class="mb-4 p-4 bg-white border border-red-200 rounded-full shadow-sm w-4/5" />
+
+            <!-- Password Field -->
+            <TextField hint="Password" 
+                       text="{{ password }}" 
+                       secure="true" 
+                       color="black"
+                       class="mb-4 p-4 bg-white border border-red-200 rounded-full shadow-sm w-4/5" />
+
+            <!-- Sign Up Button -->
+            <Button text="Sign Up" 
+                    tap="{{ onSignUpTap }}" 
+                    class="bg-red-400 text-white font-bold py-3 rounded-full shadow-md mt-4 w-4/5" />
+
+            <!-- Optional Link to Login Page -->
+            <Label text="Already have an account? Log In" 
+                   class="text-center text-red-500 mt-4"
+                   tap="{{ onLoginTap }}" />
+
+        </StackLayout>
+    </ScrollView>
 </Page>

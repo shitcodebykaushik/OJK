@@ -1,33 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-white">
-    <ActionBar title="Login" class="bg-red-600 text-white" />
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-red-300">
+    <ActionBar title="Login" class="bg-red-300 text-white" />
     
-    <StackLayout class="p-8">
-        <Label text="Welcome Back!" class="text-3xl font-extrabold text-center text-red-600 mb-8" />
-        
-        <TextField hint="Email" 
-                  text="{{ email }}" 
-                  keyboardType="email" 
-                  autocorrect="false" 
-                  autocapitalizationType="none"
-                  color="black"
-                  class="mb-5 p-5 bg-gray-100 border border-gray-300 rounded-full shadow-sm" />
-                  
-        <TextField hint="Password" 
-                  text="{{ password }}" 
-                  secure="true" 
-                  color="black"
-                  class="mb-5 p-5 bg-gray-100 border border-gray-300 rounded-full shadow-sm" />
-        
-        <Button text="Login" 
-                tap="{{ onLoginTap }}" 
-                class="bg-red-600 text-white font-bold py-4 rounded-full shadow-md mb-6" />
+    <ScrollView>
+        <StackLayout class="p-8" horizontalAlignment="center">
+            
+            <!-- Welcome Message -->
+            <Label text="Welcome Back!" class="text-3xl font-extrabold text-center text-gray-800 mb-8" />
+            
+            <!-- Email Field -->
+            <TextField hint="Email" 
+                      text="{{ email }}" 
+                      keyboardType="email" 
+                      autocorrect="false" 
+                      autocapitalizationType="none"
+                      color="black"
+                      class="mb-5 p-5 bg-white border border-red-200 rounded-full shadow-sm w-full" />
+                      
+            <!-- Password Field -->
+            <TextField hint="Password" 
+                      text="{{ password }}" 
+                      secure="true" 
+                      color="black"
+                      class="mb-5 p-5 bg-white border border-red-200 rounded-full shadow-sm w-full" />
+            
+            <!-- Login Button -->
+            <Button text="Login" 
+                    tap="{{ onLoginTap }}" 
+                    class="bg-red-600 text-white font-bold py-4 rounded-full shadow-md w-full mb-6" />
 
-        <StackLayout orientation="horizontal" class="mt-6 justify-center">
-            <Label text="Don't have an account? " class="text-gray-700" />
-            <Label text="Sign Up" 
-                   tap="{{ onSignUpTap }}" 
-                   class="text-red-600 font-semibold underline" />
+            <!-- Link to Sign Up -->
+            <StackLayout orientation="horizontal" class="mt-6 justify-center">
+                <Label text="Don't have an account? " class="text-gray-700" />
+                <Label text="Sign Up" 
+                       tap="{{ onSignUpTap }}" 
+                       class="text-red-600 font-semibold underline" />
+            </StackLayout>
+
         </StackLayout>
-    </StackLayout>
+    </ScrollView>
 </Page>
