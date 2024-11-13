@@ -1,15 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <ActionBar title="Home">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-red-300">
+    <ActionBar title="Music Home" class="bg-red-400 text-white">
         <ActionItem text="Logout" tap="{{ onLogoutTap }}" ios.position="right" />
     </ActionBar>
-    
-    <StackLayout class="p-6">
-        <Label text="Welcome!" class="text-2xl font-bold text-center mb-6" />
-        <Label text="You're successfully logged in" class="text-center mb-6" />
-        
-        <Button text="Make a Booking" 
-                tap="{{ onBookingTap }}" 
-                class="bg-green-500 text-white font-bold py-3 rounded" />
-    </StackLayout>
+
+    <ScrollView>
+        <StackLayout class="p-6">
+            
+            <!-- Welcome Message -->
+            <Label text="Welcome to the Music World!" class="text-2xl font-bold text-center mb-6 text-gray-800" />
+
+            <!-- Featured Albums Section -->
+            <Label text="Featured Albums" class="text-lg font-semibold mb-4 text-gray-900" />
+            <GridLayout rows="auto" columns="*, *, *, *, *, *, *" class="mb-6" horizontalAlignment="center">
+                <StackLayout class="m-2">
+                    <Image src="~/images/featured1.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/featured2.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/featured3.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/featured4.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/featured5.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/featured6.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/featured7.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                </StackLayout>
+            </GridLayout>
+
+            <!-- Popular Songs Section -->
+            <Label text="Popular Songs" class="text-lg font-semibold mb-4 text-gray-900" />
+            <GridLayout rows="auto" columns="*, *, *, *, *" class="mb-6" horizontalAlignment="center">
+                <StackLayout class="m-2">
+                    <Image src="~/images/popular1.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                    <Label text="Song Title 1" class="text-center text-gray-800 text-sm mt-2" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/popular2.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                    <Label text="Song Title 2" class="text-center text-gray-800 text-sm mt-2" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/popular3.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                    <Label text="Song Title 3" class="text-center text-gray-800 text-sm mt-2" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/popular4.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                    <Label text="Song Title 4" class="text-center text-gray-800 text-sm mt-2" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/popular5.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-200" />
+                    <Label text="Song Title 5" class="text-center text-gray-800 text-sm mt-2" />
+                </StackLayout>
+            </GridLayout>
+
+            <!-- Song of the Week Section -->
+            <Label text="Song of the Week" class="text-lg font-semibold mt-6 mb-4 text-gray-900" />
+            <StackLayout orientation="horizontal" class="p-4 bg-red-200 rounded-lg shadow-lg">
+                <Image src="~/images/song_of_the_week.jpg" class="h-20 w-20 rounded-full mr-4 border-2 border-red-300" />
+                <StackLayout>
+                    <Label text="{{ songOfTheWeek.title }}" class="text-xl font-bold text-gray-800" />
+                    <Label text="{{ songOfTheWeek.artist }}" class="text-md text-gray-700 mb-2" />
+                    <Button text="Play Now" tap="{{ onPlayNowTap }}" class="bg-red-400 text-white font-bold py-2 px-4 rounded" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Featured Artists Section -->
+            <Label text="Featured Artists" class="text-lg font-semibold mt-6 mb-4 text-gray-900" />
+            <GridLayout rows="auto" columns="*, *, *, *, *" class="mb-6" horizontalAlignment="center">
+                <StackLayout class="m-2">
+                    <Image src="~/images/artist1.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-300" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/artist2.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-300" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/artist3.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-300" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/artist4.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-300" />
+                </StackLayout>
+                <StackLayout class="m-2">
+                    <Image src="~/images/artist5.jpg" stretch="aspectFill" class="h-24 w-24 rounded-full border-2 border-red-300" />
+                </StackLayout>
+            </GridLayout>
+
+            <!-- Discover More Button -->
+            <Button text="Discover More" 
+                    tap="{{ onBookingTap }}" 
+                    class="bg-red-400 text-white font-bold py-3 rounded-lg mt-6 shadow-md" />
+
+        </StackLayout>
+    </ScrollView>
 </Page>
